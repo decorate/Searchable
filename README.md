@@ -36,19 +36,19 @@ With composer:
 
 ```php
 class User extends Model {
-	use Searchable;
-
-	protected function getSearches(){
-		return [
-			'name' => 'like',
-			'detail_name' => 'like:detail.name' 
-		];
-	}
+  use Searchable;
+  
+  protected function getSearches(){
+    return [
+      'name' => 'like',
+      'detail_name' => 'like:detail.name' 
+    ];
+  }
 }
 ```
 ### injection search
 ```php
 protected function injectSearch(Builder $builder, Request $request){
-	$builder->where('id', '=', $request->query('id'));
+  $builder->where('id', '=', $request->query('id'));
 }
 ```
