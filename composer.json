@@ -1,0 +1,21 @@
+{
+    "name": "decorate/searchable",
+    "description": "search support",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mitu",
+            "email": "mitu2687sp@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Decorate\\": "src",
+            "Searchable\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "../vendor/bin/phpunit"
+    },
+    "minimum-stability": "dev"
+}
