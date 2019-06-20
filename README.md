@@ -34,6 +34,7 @@ With composer:
 ];
 ```
 
+### Usage
 ```php
 class User extends Model {
   use Searchable;
@@ -46,6 +47,16 @@ class User extends Model {
   }
 }
 ```
+```php
+class UsersController extends Controller {
+  
+  public function index(Request $request) {
+    return User::search($request);
+  }
+  
+}
+```
+
 ### injection search
 ```php
 protected function injectSearch(Builder $builder, Request $request){
