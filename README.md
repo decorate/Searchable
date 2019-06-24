@@ -30,7 +30,9 @@ With composer:
     }],  
     'title4' => 'like:detail.',  
     'startDate' => 'between:begin_time',  
-    'endDate' => 'between_end:begin_time'  
+    'endDate' => 'between_end:begin_time',
+    'level' => 'in:level_id',
+    'level2' => in:detail.level_id  
 ];
 ```
 
