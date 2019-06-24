@@ -5,6 +5,7 @@ namespace Decorate\Entities;
 use Decorate\Entities\Operators\Like;
 use Decorate\Entities\Operators\Between;
 use Decorate\Entities\Operators\Where;
+use Decorate\Entities\Operators\WhereIn;
 
 class From {
 
@@ -21,6 +22,11 @@ class From {
 
         if($this->hasBetween($command)) {
             $this->instance = new Between($command);
+            return;
+        }
+
+        if($this->hasIn($command)) {
+            $this->instance = new WhereIn($command);
             return;
         }
 
@@ -45,6 +51,14 @@ class From {
         }
 
         return str_contains($analyze->operator, 'between');
+    }
+
+    private function hasIn(CommandAnalyze $analyze) {
+        if(!is_string($analyze->operator)) {
+            return false;
+        }
+
+        return str_contains($analyze->operator, 'in');
     }
 
 }

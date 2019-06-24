@@ -122,7 +122,7 @@ class CommandAnalyze {
     }
 
     private function setColumnKey($value) {
-        if(preg_match('/(like|max|min)|[!-\-:-\@]/', $value)) {
+        if(preg_match('/(like|in)|[!-\-:-\@]/', $value)) {
             $this->columnKey = $this->keyValue->key;
             return;
         }
