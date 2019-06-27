@@ -41,7 +41,7 @@ With composer:
 class User extends Model {
   use Searchable;
   
-  protected function getSearches(){
+  public function getSearches(){
     return [
       'name' => 'like',
       'detail_name' => 'like:detail.name' 

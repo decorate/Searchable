@@ -24,7 +24,7 @@ trait Searchable {
     protected function injectSearch(Builder $builder, Request $request) {
     }
 
-    protected function getSearches() : array{
+    public function getSearches() : array{
         return [];
     }
 

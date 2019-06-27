@@ -349,7 +349,7 @@
 
         static $inject = [];
 
-        protected function getSearches(): array
+        public function getSearches(): array
         {
             return self::$inject;
         }
