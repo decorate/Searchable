@@ -10,8 +10,6 @@ use Illuminate\Http\Request;
 
 trait Searchable {
 
-    protected $guarded = ['searches'];
-
     public function scopeSearch(Builder $builder, Request $request) {
 
         $this->injectSearch($builder, $request);

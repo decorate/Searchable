@@ -323,7 +323,7 @@
 
         static $injectSearch;
 
-        protected function getSearches()
+        public function getSearches(): array
         {
             return self::$inject;
         }
