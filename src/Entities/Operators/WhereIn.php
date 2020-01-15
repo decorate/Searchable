@@ -22,7 +22,7 @@ class WhereIn implements ISearch {
     public function getQuery(Builder $builder, Request $request)
     {
         $value = $request->query($this->analyze->queryKey);
-        if($value) {
+        if($value !== null) {
             $values = explode(',', $value);
 
             if($this->analyze->relationTable) {
